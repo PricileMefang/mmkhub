@@ -5,7 +5,7 @@ $db = get_db();
 $lang = get_lang();
 
 // Simple admin action handlers
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $action = $_POST['admin_action'] ?? '';
 
     if ($action === 'update_order_status') {
