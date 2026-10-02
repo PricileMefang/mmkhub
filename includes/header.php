@@ -11,7 +11,7 @@ $user_role = get_user_role();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= t('MMK Hub - Cameroon Commercial & Wholesale Sourcing', 'MMK Hub - Plateforme Commerciale & Vente en Gros au Cameroun') ?></title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="assets/images/solar_lantern.jpg">
+  <link rel="icon" href="assets/images/logo.png">
 </head>
 <body data-mode="<?= $is_ws ? 'wholesale' : 'retail' ?>">
 
@@ -39,9 +39,11 @@ $user_role = get_user_role();
       
       <!-- Brand Logo -->
       <a href="index.php" class="brand-wrapper">
-        <div class="brand-logo-badge">M</div>
+        <img src="assets/images/logo.png" alt="MMK Hub Logo" class="brand-logo-img">
         <div class="brand-info">
-          <h1>MMK HUB <span style="font-size: 0.85rem; color: #10b981;">🇨🇲</span></h1>
+          <div style="font-size: 1.3rem; font-weight: 800; color: #0f172a; line-height: 1.1; font-family: 'Outfit', sans-serif; display: flex; align-items: center; gap: 6px;">
+            <span>MMK HUB</span> <span style="font-size: 0.85rem;">🇨🇲</span>
+          </div>
           <div class="brand-tagline"><?= t('Direct Commercial & Wholesale Hub', 'Commerce Direct & Vente en Gros') ?></div>
         </div>
       </a>

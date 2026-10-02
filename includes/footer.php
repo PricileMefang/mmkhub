@@ -84,7 +84,13 @@ $lang = get_lang();
     <div class="footer-container">
       
       <div class="footer-col">
-        <h4 style="color: #fff; font-size: 1.25rem;">MMK HUB 🇨🇲</h4>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <img src="assets/images/logo.png" alt="MMK Hub" style="height: 42px; border-radius: 6px; background: #fff; padding: 2px;">
+          <div>
+            <div style="color: #fff; font-weight: 800; font-size: 1.2rem; line-height: 1;">MMK HUB</div>
+            <div style="font-size: 0.7rem; color: #10b981; font-weight: 700;">CAMEROON 🇨🇲</div>
+          </div>
+        </div>
         <p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 16px;">
           <?= t(
             'Cameroon’s premier direct commercial and wholesale hub. Operating as a single-seller owner platform for guaranteed product quality, zero third-party counterfeit risks, and dedicated customer fulfillment.',

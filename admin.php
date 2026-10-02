@@ -89,7 +89,7 @@ $bookings = $db->query("SELECT * FROM service_bookings ORDER BY id DESC")->fetch
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MMK Hub - Owner Control Center 🇨🇲</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="assets/images/solar_lantern.jpg">
+  <link rel="icon" href="assets/images/logo.png">
   <style>
     .admin-layout {
       display: grid;
@@ -185,10 +185,10 @@ $bookings = $db->query("SELECT * FROM service_bookings ORDER BY id DESC")->fetch
   <!-- Sidebar -->
   <aside class="admin-sidebar">
     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px; padding: 0 8px;">
-      <div class="brand-logo-badge" style="width: 36px; height: 36px; font-size: 1rem;">M</div>
+      <img src="assets/images/logo.png" alt="MMK Hub" style="height: 42px; border-radius: 8px; background: #fff; padding: 2px;">
       <div>
-        <div style="font-weight: 800; color: #fff; font-size: 1.1rem; line-height: 1;">MMK HUB</div>
-        <div style="font-size: 0.7rem; color: #10b981; font-weight: 700;">OWNER PORTAL 🇨🇲</div>
+        <div style="font-weight: 800; color: #fff; font-size: 1.15rem; line-height: 1;">MMK HUB</div>
+        <div style="font-size: 0.7rem; color: #10b981; font-weight: 700; letter-spacing: 0.5px;">OWNER PORTAL 🇨🇲</div>
       </div>
     </div>
 

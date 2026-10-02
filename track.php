@@ -91,14 +91,17 @@ $currentStep = $order ? ($statusMap[$order['fulfillment_status']] ?? 1) : 1;
 
       <!-- Invoice Header -->
       <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #0f172a; padding-bottom: 20px; margin-bottom: 24px;">
-        <div>
-          <h2 style="font-size: 1.8rem; color: #047857; margin-bottom: 4px;">MMK HUB SARL</h2>
+        <div style="display: flex; gap: 16px; align-items: center;">
+          <img src="assets/images/logo.png" alt="MMK Hub" style="height: 60px; border-radius: 8px; border: 1px solid #cbd5e1; padding: 2px;">
+          <div>
+            <h2 style="font-size: 1.8rem; color: #047857; margin-bottom: 2px;">MMK HUB SARL</h2>
           <div style="font-size: 0.85rem; color: #475569; line-height: 1.4;">
             RC/DLA/2026/B/8921 • NIU: M0226149204A<br>
             Akwa Commercial Center, Douala, Cameroon<br>
             Phone / WhatsApp: +237 670 000 000 • Email: contact@mmkhub.cm
           </div>
         </div>
+      </div>
 
         <div style="text-align: right;">
           <h3 style="font-size: 1.4rem; color: #0f172a;"><?= t('PROFORMA INVOICE', 'FACTURE PROFORMA') ?></h3>
