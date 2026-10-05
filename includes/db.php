@@ -347,6 +347,7 @@ function get_user_role(): string {
 }
 
 function is_wholesale(): bool {
+    // wholesale_suspended buyers are blocked
     if (isset($_SESSION['channel_mode']) && $_SESSION['channel_mode'] === 'wholesale') {
         return true;
     }

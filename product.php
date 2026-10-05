@@ -43,7 +43,7 @@ $minQty = $is_ws ? max(1, $product['moq']) : 1;
       <div style="margin-top: 16px; display: flex; gap: 12px;">
         <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px 14px; flex: 1; text-align: center;">
           <div style="font-size: 0.75rem; color: #64748b;"><?= t('Stock Status', 'Disponibilité') ?></div>
-          <div style="font-weight: 700; color: #047857;">✓ <?= $product['stock'] ?> <?= t('Units in Douala', 'Unités à Douala') ?></div>
+          <div style="font-weight: 700; color: #047857;"><i data-lucide="check-circle" class="icon-xs"></i> <?= $product['stock'] ?> <?= t('Units in Douala', 'Unités à Douala') ?></div>
         </div>
         <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px 14px; flex: 1; text-align: center;">
           <div style="font-size: 0.75rem; color: #64748b;"><?= t('SKU Code', 'Référence') ?></div>
@@ -81,7 +81,7 @@ $minQty = $is_ws ? max(1, $product['moq']) : 1;
         <?php if ($is_ws && !empty($tiers) && !$product['is_service']): ?>
           <div style="margin-bottom: 18px; border-top: 1px dashed #cbd5e1; padding-top: 12px;">
             <div style="font-size: 0.825rem; font-weight: 700; margin-bottom: 8px; color: #0f172a;">
-              📊 <?= t('Volume Discount Matrix (Automatic Tier Pricing):', 'Grille de Remises Volume Dégressives :') ?>
+              <i data-lucide="bar-chart-3" class="icon-xs"></i> <?= t('Volume Discount Matrix (Automatic Tier Pricing):', 'Grille de Remises Volume Dégressives :') ?>
             </div>
             <table style="width: 100%; font-size: 0.8rem; border-collapse: collapse; text-align: left;">
               <tr style="background: #e2e8f0; font-weight: 700;">
@@ -126,18 +126,18 @@ $minQty = $is_ws ? max(1, $product['moq']) : 1;
 
         <?php if ($is_ws): ?>
           <div style="font-size: 0.775rem; color: #b45309; background: #fef3c7; border: 1px solid #fde68a; border-radius: 6px; padding: 8px 12px; margin-bottom: 16px;">
-            ⚠️ <?= t("Wholesale MOQ: You must order at least {$product['moq']} units.", "MOQ Grossiste : Commande minimum de {$product['moq']} unités requise.") ?>
+            <i data-lucide="alert-triangle" class="icon-xs"></i> <?= t("Wholesale MOQ: You must order at least {$product['moq']} units.", "MOQ Grossiste : Commande minimum de {$product['moq']} unités requise.") ?>
           </div>
         <?php endif; ?>
 
         <!-- Action Buttons -->
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
           <button type="button" class="btn-card-primary" style="flex: 1; padding: 14px; font-size: 1rem;" onclick="addDetailToCart()">
-            🛒 <?= t('Add to Cart & Checkout', 'Ajouter au Panier & Commander') ?>
+            <i data-lucide="shopping-cart" class="icon-sm"></i> <?= t('Add to Cart & Checkout', 'Ajouter au Panier & Commander') ?>
           </button>
           
           <button type="button" class="btn-card-details" style="display: flex; align-items: center; gap: 8px; padding: 14px 18px;" onclick="orderViaWhatsApp()">
-            💬 <?= t('Order via WhatsApp', 'Commander sur WhatsApp') ?>
+            <i data-lucide="message-circle" class="icon-sm"></i> <?= t('Order via WhatsApp', 'Commander sur WhatsApp') ?>
           </button>
         </div>
 
@@ -145,12 +145,12 @@ $minQty = $is_ws ? max(1, $product['moq']) : 1;
 
       <!-- Cameroon Delivery Estimator Box -->
       <div style="border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; font-size: 0.85rem;">
-        <h4 style="font-size: 0.95rem; margin-bottom: 8px;">🚚 <?= t('Cameroon Logistics Dispatch Times:', 'Délais d\'Expédition au Cameroun :') ?></h4>
+        <h4 style="font-size: 0.95rem; margin-bottom: 8px;"><i data-lucide="truck" class="icon-xs"></i> <?= t('Cameroon Logistics Dispatch Times:', 'Délais d\'Expédition au Cameroun :') ?></h4>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; color: #64748b;">
-          <li>📍 <strong>Douala (Akwa, Bonapriso, Bonabéri):</strong> <?= t('Same-day / 24h Courier (1 500 FCFA)', 'Livraison coursier sous 24h (1 500 FCFA)') ?></li>
-          <li>📍 <strong>Yaoundé (Mokolo, Bastos, Centre):</strong> <?= t('Express Shuttle 24h (2 000 FCFA)', 'Navette express 24h (2 000 FCFA)') ?></li>
-          <li>📍 <strong>West & South-West (Bafoussam, Bamenda, Buea):</strong> <?= t('Regional Freight Agency 48h (3 500 FCFA)', 'Agences partenaires 48h (3 500 FCFA)') ?></li>
-          <li>📍 <strong>Douala Akwa Depot Pickup:</strong> <?= t('Free (Immediate Collection)', 'Gratuit (Retrait immédiat au dépôt)') ?></li>
+          <li><i data-lucide="map-pin" class="icon-xs"></i> <strong>Douala (Akwa, Bonapriso, Bonabéri):</strong> <?= t('Same-day / 24h Courier (1 500 FCFA)', 'Livraison coursier sous 24h (1 500 FCFA)') ?></li>
+          <li><i data-lucide="map-pin" class="icon-xs"></i> <strong>Yaoundé (Mokolo, Bastos, Centre):</strong> <?= t('Express Shuttle 24h (2 000 FCFA)', 'Navette express 24h (2 000 FCFA)') ?></li>
+          <li><i data-lucide="map-pin" class="icon-xs"></i> <strong>West & South-West (Bafoussam, Bamenda, Buea):</strong> <?= t('Regional Freight Agency 48h (3 500 FCFA)', 'Agences partenaires 48h (3 500 FCFA)') ?></li>
+          <li><i data-lucide="map-pin" class="icon-xs"></i> <strong>Douala Akwa Depot Pickup:</strong> <?= t('Free (Immediate Collection)', 'Gratuit (Retrait immédiat au dépôt)') ?></li>
         </ul>
       </div>
 

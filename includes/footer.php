@@ -5,8 +5,8 @@ $lang = get_lang();
   <div class="cart-drawer-overlay" id="cartDrawerOverlay" onclick="if(event.target === this) MMK.closeCartDrawer()">
     <div class="cart-drawer">
       <div class="drawer-head">
-        <h3>🛒 <?= t('Your Shopping Cart', 'Votre Panier') ?></h3>
-        <button type="button" class="btn-close-drawer" onclick="MMK.closeCartDrawer()">✕</button>
+        <h3><i data-lucide="shopping-cart"></i> <?= t('Your Shopping Cart', 'Votre Panier') ?></h3>
+        <button type="button" class="btn-close-drawer" onclick="MMK.closeCartDrawer()"><i data-lucide="x"></i></button>
       </div>
 
       <div class="drawer-items-list" id="drawerCartItems">
@@ -28,7 +28,7 @@ $lang = get_lang();
         </div>
 
         <a href="checkout.php" id="drawerCheckoutBtn" class="btn-checkout-cameroon">
-          🔒 <?= t('Proceed to Cameroon Checkout', 'Passer à la Caisse (Cameroun)') ?>
+          <i data-lucide="lock" class="icon-sm"></i> <?= t('Proceed to Cameroon Checkout', 'Passer à la Caisse (Cameroun)') ?>
         </a>
       </div>
     </div>
@@ -50,7 +50,7 @@ $lang = get_lang();
           </div>
           <input type="password" maxlength="5" class="ussd-pin-input" id="ussdPinInput" placeholder="••••" autocomplete="off">
           <button type="button" class="btn-card-primary" id="ussdApproveBtn" style="width: 100%;">
-            ✓ <?= t('Confirm & Authorize', 'Confirmer & Autoriser') ?>
+            <i data-lucide="check" class="icon-sm"></i> <?= t('Confirm & Authorize', 'Confirmer & Autoriser') ?>
           </button>
         </div>
 
@@ -75,7 +75,7 @@ $lang = get_lang();
   <!-- Floating WhatsApp Quick Support -->
   <a href="https://wa.me/237670000000?text=Hello%20MMK%20Hub,%20I%20have%20an%20inquiry%20regarding%20an%20order" 
      target="_blank" class="floating-whatsapp" title="<?= t('Chat with MMK Hub Owner on WhatsApp', 'Discuter avec le Propriétaire sur WhatsApp') ?>">
-    <span style="font-size: 1.25rem;">💬</span>
+    <i data-lucide="message-circle" class="icon-md"></i>
     <span><?= t('Direct WhatsApp Help', 'Assistance WhatsApp Directe') ?></span>
   </a>
 
@@ -88,7 +88,7 @@ $lang = get_lang();
           <img src="assets/images/logo.png" alt="MMK Hub" style="height: 42px; border-radius: 6px; background: #fff; padding: 2px;">
           <div>
             <div style="color: #fff; font-weight: 800; font-size: 1.2rem; line-height: 1;">MMK HUB</div>
-            <div style="font-size: 0.7rem; color: #10b981; font-weight: 700;">CAMEROON 🇨🇲</div>
+            <div style="font-size: 0.7rem; color: #10b981; font-weight: 700;">CAMEROON <span class="cm-badge">CM</span></div>
           </div>
         </div>
         <p style="font-size: 0.875rem; line-height: 1.6; margin-bottom: 16px;">
@@ -98,7 +98,7 @@ $lang = get_lang();
           ) ?>
         </p>
         <div style="font-size: 0.8rem; color: #10b981; font-weight: 600;">
-          📍 <?= t('Central Depot: Akwa, Douala & Mokolo, Yaoundé', 'Dépôt Central : Akwa, Douala & Mokolo, Yaoundé') ?>
+          <i data-lucide="map-pin" class="icon-xs"></i> <?= t('Central Depot: Akwa, Douala & Mokolo, Yaoundé', 'Dépôt Central : Akwa, Douala & Mokolo, Yaoundé') ?>
         </div>
       </div>
 
@@ -131,13 +131,13 @@ $lang = get_lang();
         </p>
         <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.825rem; font-weight: 600;">
           <div style="background: #1e293b; padding: 8px 12px; border-radius: 6px; border: 1px solid #334155; color: #fbbf24;">
-            🟡 MTN Mobile Money (*126#)
+            <i data-lucide="smartphone" class="icon-xs"></i> MTN Mobile Money (*126#)
           </div>
           <div style="background: #1e293b; padding: 8px 12px; border-radius: 6px; border: 1px solid #334155; color: #fb923c;">
-            🟠 Orange Money Cameroun (#150#)
+            <i data-lucide="smartphone" class="icon-xs"></i> Orange Money Cameroun (#150#)
           </div>
           <div style="background: #1e293b; padding: 8px 12px; border-radius: 6px; border: 1px solid #334155; color: #38bdf8;">
-            💵 <?= t('Cash on Delivery (Retail Orders)', 'Paiement à la Livraison (Détail)') ?>
+            <i data-lucide="banknote" class="icon-xs"></i> <?= t('Cash on Delivery (Retail Orders)', 'Paiement à la Livraison (Détail)') ?>
           </div>
         </div>
       </div>
@@ -155,5 +155,6 @@ $lang = get_lang();
   </footer>
 
   <script src="js/app.js"></script>
+  <script>if(window.lucide) { lucide.createIcons(); }</script>
 </body>
 </html>

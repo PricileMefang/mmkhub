@@ -30,7 +30,7 @@ $currentStep = $order ? ($statusMap[$order['fulfillment_status']] ?? 1) : 1;
 <div style="max-width: 960px; margin: 40px auto; padding: 0 20px;">
   
   <div style="text-align: center; margin-bottom: 32px;" class="no-print">
-    <h1 style="font-size: 2.2rem; margin-bottom: 6px;">🚚 <?= t('Real-Time Order & Logistics Tracker', 'Suivi de Commande en Temps Réel') ?></h1>
+    <h1 style="font-size: 2.2rem; margin-bottom: 6px;"><i data-lucide="truck"></i> <?= t('Real-Time Order & Logistics Tracker', 'Suivi de Commande en Temps Réel') ?></h1>
     <p style="color: #64748b;"><?= t('Enter your 8-character MMK Hub tracking code to inspect delivery status or print your formal proforma invoice.', 'Saisissez votre code MMK Hub pour suivre l\'acheminement ou imprimer votre facture.') ?></p>
     
     <!-- Code Lookup Form -->
@@ -38,7 +38,7 @@ $currentStep = $order ? ($statusMap[$order['fulfillment_status']] ?? 1) : 1;
       <input type="text" name="code" value="<?= htmlspecialchars($code) ?>" placeholder="e.g. MMK-78419" required
              style="padding: 12px 18px; border-radius: 8px; border: 2px solid #cbd5e1; font-size: 1rem; font-weight: 700; text-transform: uppercase;">
       <button type="submit" class="btn-card-primary" style="padding: 12px 24px; font-size: 1rem;">
-        🔍 <?= t('Track', 'Vérifier') ?>
+        <i data-lucide="search" class="icon-xs"></i> <?= t('Track', 'Vérifier') ?>
       </button>
     </form>
   </div>
@@ -50,19 +50,19 @@ $currentStep = $order ? ($statusMap[$order['fulfillment_status']] ?? 1) : 1;
       <div class="tracking-stepper">
         
         <div class="step-node <?= $currentStep >= 1 ? 'completed' : '' ?> <?= $currentStep === 1 ? 'current' : '' ?>">
-          <div class="step-number"><?= $currentStep > 1 ? '✓' : '1' ?></div>
+          <div class="step-number"><?= $currentStep > 1 ? '<i data-lucide="check" class="icon-xs"></i>' : '1' ?></div>
           <div style="font-weight: 700; font-size: 0.9rem;"><?= t('1. Order Received', '1. Reçue & Validée') ?></div>
           <div style="font-size: 0.75rem; color: #64748b;"><?= t('Payment / Deposit verified', 'Paiement ou acompte vérifié') ?></div>
         </div>
 
         <div class="step-node <?= $currentStep >= 2 ? 'completed' : '' ?> <?= $currentStep === 2 ? 'current' : '' ?>">
-          <div class="step-number"><?= $currentStep > 2 ? '✓' : '2' ?></div>
+          <div class="step-number"><?= $currentStep > 2 ? '<i data-lucide="check" class="icon-xs"></i>' : '2' ?></div>
           <div style="font-weight: 700; font-size: 0.9rem;"><?= t('2. Picking & Quality Check', '2. Préparation & Contrôle') ?></div>
           <div style="font-size: 0.75rem; color: #64748b;"><?= t('Inspected at Douala Depot', 'Conditionnement dépôt Akwa') ?></div>
         </div>
 
         <div class="step-node <?= $currentStep >= 3 ? 'completed' : '' ?> <?= $currentStep === 3 ? 'current' : '' ?>">
-          <div class="step-number"><?= $currentStep > 3 ? '✓' : '3' ?></div>
+          <div class="step-number"><?= $currentStep > 3 ? '<i data-lucide="check" class="icon-xs"></i>' : '3' ?></div>
           <div style="font-weight: 700; font-size: 0.9rem;"><?= t('3. Dispatched / In Transit', '3. Expédié / En Route') ?></div>
           <div style="font-size: 0.75rem; color: #64748b;"><?= t('Courier or regional shuttle en route', 'Coursier ou navette en transit') ?></div>
         </div>
@@ -77,7 +77,7 @@ $currentStep = $order ? ($statusMap[$order['fulfillment_status']] ?? 1) : 1;
 
       <div style="text-align: right; margin-bottom: 20px;">
         <button type="button" class="btn-card-details" onclick="window.print()" style="font-weight: 700;">
-          🖨️ <?= t('Print Formal Proforma Invoice (PDF)', 'Imprimer Facture Proforma (PDF)') ?>
+          <i data-lucide="printer" class="icon-sm"></i> <?= t('Print Formal Proforma Invoice (PDF)', 'Imprimer Facture Proforma (PDF)') ?>
         </button>
       </div>
     </div>

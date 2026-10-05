@@ -20,9 +20,7 @@ $waUrl = "https://wa.me/237670000000?text=" . urlencode($whatsappMsg);
 
 <div style="max-width: 760px; margin: 50px auto; padding: 0 20px; text-align: center;">
   
-  <div style="width: 80px; height: 80px; background: #ecfdf5; border: 2px solid #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #047857; margin: 0 auto 20px;">
-    ✓
-  </div>
+  <div style="width: 80px; height: 80px; background: #ecfdf5; border: 2px solid #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #047857; margin: 0 auto 20px;"><i data-lucide="check" class="icon-xl"></i></div>
 
   <h1 style="font-size: 2.2rem; margin-bottom: 8px;"><?= t('Order Successfully Authorized!', 'Commande Autorisée avec Succès !') ?></h1>
   <p style="font-size: 1rem; color: #64748b; margin-bottom: 24px;">
@@ -56,7 +54,7 @@ $waUrl = "https://wa.me/237670000000?text=" . urlencode($whatsappMsg);
       </div>
       <div>
         <span style="color: #64748b;"><?= t('Payment Status:', 'Statut Règlement :') ?></span>
-        <strong style="color: #047857;">✓ <?= strtoupper(str_replace('_', ' ', $order['payment_status'])) ?></strong>
+        <strong style="color: #047857;"><i data-lucide="check" class="icon-xs"></i> <?= strtoupper(str_replace('_', ' ', $order['payment_status'])) ?></strong>
       </div>
     </div>
 
@@ -75,11 +73,11 @@ $waUrl = "https://wa.me/237670000000?text=" . urlencode($whatsappMsg);
   <!-- Action CTA Buttons -->
   <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
     <a href="<?= $waUrl ?>" target="_blank" class="floating-whatsapp" style="position: static; box-shadow: var(--shadow-md);">
-      <span>💬</span> <span><?= t('Sync & Notify Owner on WhatsApp', 'Notifier le Propriétaire sur WhatsApp') ?></span>
+      <i data-lucide="message-circle" class="icon-sm"></i> <span><?= t('Sync & Notify Owner on WhatsApp', 'Notifier le Propriétaire sur WhatsApp') ?></span>
     </a>
 
     <a href="track.php?code=<?= urlencode($order['order_code']) ?>" class="btn-card-primary" style="padding: 12px 24px; font-size: 0.95rem;">
-      🚚 <?= t('View Live Order Tracking & Invoice →', 'Suivre le Colis & Facture Proforma →') ?>
+      <i data-lucide="truck" class="icon-sm"></i> <?= t('View Live Order Tracking & Invoice →', 'Suivre le Colis & Facture Proforma →') ?>
     </a>
   </div>
 

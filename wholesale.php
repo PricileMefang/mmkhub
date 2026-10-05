@@ -12,7 +12,7 @@ $lang = get_lang();
   <div style="background: linear-gradient(135deg, #064e3b 0%, #047857 50%, #0f172a 100%); color: #fff; border-radius: 20px; padding: 48px 36px; margin-bottom: 40px; box-shadow: var(--shadow-lg);">
     <div style="max-width: 720px;">
       <span class="hero-badge" style="background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.3); color: #fff;">
-        🏢 <?= t('B2B Commercial & Wholesale Channel', 'Espace Professionnel & Vente en Gros') ?>
+        <i data-lucide="building-2" class="icon-xs"></i> <?= t('B2B Commercial & Wholesale Channel', 'Espace Professionnel & Vente en Gros') ?>
       </span>
       <h1 style="font-size: 2.5rem; color: #fff; margin-bottom: 16px; line-height: 1.2;">
         <?= t('Source Direct from the Owner with Tiered Wholesale Discounts', 'Approvisionnez-vous en Direct avec Tarifs Dégressifs Grossistes') ?>
@@ -27,7 +27,7 @@ $lang = get_lang();
       <!-- Sandbox Quick Test Bar -->
       <div style="background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
         <div>
-          <div style="font-size: 0.8rem; font-weight: 700; color: #f59e0b;">🧪 <?= t('Sandbox Demonstration Role Switcher:', 'Simulateur de Profil Grossiste :') ?></div>
+          <div style="font-size: 0.8rem; font-weight: 700; color: #f59e0b;"><i data-lucide="flask-conical" class="icon-xs"></i> <?= t('Sandbox Demonstration Role Switcher:', 'Simulateur de Profil Grossiste :') ?></div>
           <div style="font-size: 0.775rem; color: #cbd5e1;">
             <?= t('Test how the storefront behaves under different verification states:', 'Testez l\'affichage selon l\'état de validation du compte :') ?>
           </div>
@@ -41,7 +41,7 @@ $lang = get_lang();
             <?= t('Pending Applicant', 'Candidat en Attente') ?>
           </a>
           <a href="api/actions.php?action=set_demo_role&role=wholesale_approved" class="cat-pill" style="font-size: 0.75rem; padding: 6px 12px; <?= $user_role === 'wholesale_approved' ? 'background:#10b981; color:#fff;' : '' ?>">
-            ✨ <?= t('Approved Merchant', 'Grossiste Agréé') ?>
+            <i data-lucide="sparkles" class="icon-xs"></i> <?= t('Approved Merchant', 'Grossiste Agréé') ?>
           </a>
         </div>
       </div>
@@ -59,12 +59,12 @@ $lang = get_lang();
 
       <?php if ($user_role === 'wholesale_pending'): ?>
         <div style="background: #fef3c7; border: 1px solid #fde68a; border-radius: 10px; padding: 16px; margin-bottom: 20px; color: #92400e;">
-          ⏳ <strong><?= t('Application Under Review:', 'Dossier en Cours d\'Examen :') ?></strong><br>
+          <i data-lucide="clock" class="icon-xs"></i> <strong><?= t('Application Under Review:', 'Dossier en Cours d\'Examen :') ?></strong><br>
           <?= t('Your business application is currently pending owner validation. You can log into the Admin portal or use the sandbox switcher above to approve it immediately!', 'Votre demande est en cours de validation par le propriétaire. Vous pouvez l\'approuver via l\'espace Admin ou le sélecteur ci-dessus !') ?>
         </div>
       <?php elseif ($user_role === 'wholesale_approved'): ?>
         <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 10px; padding: 16px; margin-bottom: 20px; color: #065f46;">
-          ✓ <strong><?= t('Approved B2B Merchant Status Active!', 'Compte Grossiste Agréé Actif !') ?></strong><br>
+          <i data-lucide="check-circle" class="icon-xs"></i> <strong><?= t('Approved B2B Merchant Status Active!', 'Compte Grossiste Agréé Actif !') ?></strong><br>
           <?= t('All volume discounts and 50% deposit terms are currently unlocked for your account in the catalog.', 'Toutes les remises par volume et les facilités d\'acompte 50% sont actives dans votre catalogue.') ?>
         </div>
       <?php endif; ?>
@@ -143,9 +143,7 @@ $lang = get_lang();
 
         <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
           <div style="display: flex; gap: 14px; align-items: flex-start;">
-            <div style="background: #fef3c7; color: #d97706; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800;">
-              🤝
-            </div>
+            <div style="background: #fef3c7; color: #d97706; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i data-lucide="handshake" class="icon-lg"></i></div>
             <div>
               <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><?= t('50% Deposit + Balance on Delivery', 'Acompte 50% + Solde à la Réception') ?></h4>
               <p style="font-size: 0.85rem; color: #64748b; line-height: 1.5;">
@@ -157,9 +155,7 @@ $lang = get_lang();
 
         <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
           <div style="display: flex; gap: 14px; align-items: flex-start;">
-            <div style="background: #e0f2fe; color: #0284c7; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800;">
-              📑
-            </div>
+            <div style="background: #e0f2fe; color: #0284c7; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i data-lucide="file-check" class="icon-lg"></i></div>
             <div>
               <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><?= t('Compliant OHADA Invoices & Receipts', 'Facturation Conforme OHADA') ?></h4>
               <p style="font-size: 0.85rem; color: #64748b; line-height: 1.5;">

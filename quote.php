@@ -9,7 +9,7 @@ $products = $db->query("SELECT id, name_en, name_fr FROM products WHERE active =
 <div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
   
   <div style="text-align: center; margin-bottom: 32px;">
-    <h1 style="font-size: 2.2rem; margin-bottom: 8px;">📝 <?= t('Request a Custom Bulk Quote', 'Demander un Devis sur Mesure') ?></h1>
+    <h1 style="font-size: 2.2rem; margin-bottom: 8px;"><i data-lucide="file-text"></i> <?= t('Request a Custom Bulk Quote', 'Demander un Devis sur Mesure') ?></h1>
     <p style="color: #64748b; max-width: 600px; margin: 0 auto;">
       <?= t(
         'For high-volume orders (>500 units), institutional solar installations, or customized African wax print fabrics. MMK Hub owner will review and respond with tailored pricing.',
@@ -72,7 +72,7 @@ $products = $db->query("SELECT id, name_en, name_fr FROM products WHERE active =
       </div>
 
       <button type="submit" class="btn-card-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
-        📨 <?= t('Send Quote Inquiry to MMK Hub Owner', 'Envoyer la Demande de Devis') ?>
+        <i data-lucide="send" class="icon-sm"></i> <?= t('Send Quote Inquiry to MMK Hub Owner', 'Envoyer la Demande de Devis') ?>
       </button>
 
     </form>

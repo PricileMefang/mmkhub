@@ -12,6 +12,7 @@ const MMK = {
     this.initChannelMode();
     this.bindEvents();
     this.renderCartUI();
+    if (window.lucide) lucide.createIcons();
   },
 
   // --- Channel Mode (Retail vs Wholesale) ---
@@ -63,6 +64,7 @@ const MMK = {
   saveCart() {
     localStorage.setItem('mmk_cart', JSON.stringify(this.cart));
     this.renderCartUI();
+    if (window.lucide) lucide.createIcons();
   },
 
   addToCart(product, qty = 1, tier = null) {
@@ -167,7 +169,7 @@ const MMK = {
     if (this.cart.length === 0) {
       drawerList.innerHTML = `
         <div style="text-align: center; padding: 40px 20px; color: #64748b;">
-          <div style="font-size: 2.5rem; margin-bottom: 12px;">🛒</div>
+          <div style="margin-bottom: 12px;"><i data-lucide="shopping-cart" style="width: 48px; height: 48px; color: #94a3b8;"></i></div>
           <p style="font-weight: 600; margin-bottom: 6px;">Your cart is empty</p>
           <p style="font-size: 0.85rem;">Browse products or wholesale lots to add items.</p>
         </div>
@@ -206,6 +208,7 @@ const MMK = {
     });
 
     drawerList.innerHTML = html;
+    if (window.lucide) lucide.createIcons();
     document.getElementById('drawerSubtotal').textContent = this.formatCFA(totals.subtotal);
     document.getElementById('drawerTotal').textContent = this.formatCFA(totals.subtotal);
 
@@ -229,6 +232,7 @@ const MMK = {
     const overlay = document.getElementById('cartDrawerOverlay');
     if (overlay) overlay.classList.add('open');
     this.renderCartUI();
+    if (window.lucide) lucide.createIcons();
   },
 
   closeCartDrawer() {
@@ -289,7 +293,7 @@ const MMK = {
 
       document.getElementById('ussdPromptText').innerHTML = `
         <div style="text-align:center; padding: 20px 0;">
-          <div style="font-size: 1.5rem; margin-bottom: 8px;">⏳</div>
+          <div style="margin-bottom: 8px;"><i data-lucide="loader-2" class="icon-lg animate-spin"></i></div>
           <strong>Authenticating transaction...</strong><br>
           <span style="font-size:0.75rem; color:#64748b;">Communicating with ${operator.toUpperCase()} gateway...</span>
         </div>
@@ -328,10 +332,11 @@ const MMK = {
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
     toast.innerHTML = `
-      <span>${type === 'success' ? '✓' : type === 'warning' ? '⚠️' : 'ℹ️'}</span>
+      <span><i data-lucide="${type === 'success' ? 'check-circle' : type === 'warning' ? 'alert-triangle' : 'info'}" class="icon-sm"></i></span>
       <span>${message}</span>
     `;
     container.appendChild(toast);
+    if (window.lucide) lucide.createIcons();
 
     setTimeout(() => {
       toast.style.opacity = '0';

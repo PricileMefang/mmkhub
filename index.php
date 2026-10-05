@@ -47,7 +47,7 @@ $categories = [
     <!-- Hero Text -->
     <div>
       <div class="hero-badge">
-        <span>⚡</span>
+        <i data-lucide="zap" class="icon-xs"></i>
         <span><?= t('Direct Owner Sourcing Platform • Cameroon', 'Plateforme Directe Propriétaire • Cameroun') ?></span>
       </div>
       <h1 class="hero-title">
@@ -63,25 +63,25 @@ $categories = [
 
       <div class="hero-pills">
         <div class="hero-pill-item">
-          <span>📦</span>
+          <i data-lucide="package" class="icon-xs"></i>
           <span><?= t('Stock Ready in Douala Depot', 'Stock Disponible Dépôt Douala') ?></span>
         </div>
         <div class="hero-pill-item">
-          <span>📱</span>
+          <i data-lucide="smartphone" class="icon-xs"></i>
           <span><?= t('MTN MoMo & Orange Money Rails', 'Règlement MoMo & Orange Money') ?></span>
         </div>
         <div class="hero-pill-item">
-          <span>🚚</span>
+          <i data-lucide="truck" class="icon-xs"></i>
           <span><?= t('Nationwide Freight & Couriers', 'Expéditions Interurbaines') ?></span>
         </div>
       </div>
 
       <div style="display: flex; gap: 14px; flex-wrap: wrap;">
         <a href="#catalog" class="btn-card-primary" style="padding: 12px 24px; font-size: 1rem;">
-          🛒 <?= t('Explore Catalog', 'Découvrir le Catalogue') ?>
+          <i data-lucide="shopping-cart" class="icon-sm"></i> <?= t('Explore Catalog', 'Découvrir le Catalogue') ?>
         </a>
         <a href="wholesale.php" class="btn-card-details" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color:#fff; padding: 12px 24px; font-size: 1rem;">
-          🏢 <?= t('Wholesale Registration →', 'Espace Grossiste B2B →') ?>
+          <i data-lucide="building-2" class="icon-sm"></i> <?= t('Wholesale Registration →', 'Espace Grossiste B2B →') ?>
         </a>
       </div>
     </div>
@@ -97,29 +97,29 @@ $categories = [
 
       <div class="dual-card-tabs">
         <button type="button" class="card-tab-btn retail <?= !$is_ws ? 'active' : '' ?>" onclick="MMK.setChannelMode('retail')">
-          🛒 <?= t('Retail Mode', 'Mode Détail') ?>
+          <i data-lucide="shopping-bag" class="icon-xs"></i> <?= t('Retail Mode', 'Mode Détail') ?>
         </button>
         <button type="button" class="card-tab-btn wholesale <?= $is_ws ? 'active' : '' ?>" onclick="MMK.setChannelMode('wholesale')">
-          🏢 <?= t('Wholesale B2B', 'Gros B2B') ?>
+          <i data-lucide="building-2" class="icon-xs"></i> <?= t('Wholesale B2B', 'Gros B2B') ?>
         </button>
       </div>
 
       <?php if (!$is_ws): ?>
         <ul class="tab-features-list">
-          <li><span class="icon">✓</span> <span><strong><?= t('Single Unit Purchasing:', 'Achat à l\'Unité :') ?></strong> <?= t('Buy 1 or a few items for personal/household use.', 'Commandez 1 ou plusieurs articles pour votre foyer.') ?></span></li>
-          <li><span class="icon">✓</span> <span><strong><?= t('Fixed Transparent Retail Pricing:', 'Prix Fixes Transparents :') ?></strong> <?= t('Direct competitive rates in FCFA.', 'Tarifs compétitifs directs en FCFA.') ?></span></li>
-          <li><span class="icon">✓</span> <span><strong><?= t('Fast Local Courier Dispatch:', 'Livraison Express par Coursier :') ?></strong> <?= t('Douala & Yaoundé intra-city delivery within 24h.', 'Livraison locale à Douala et Yaoundé sous 24h.') ?></span></li>
-          <li><span class="icon">✓</span> <span><strong><?= t('Payment Flexibility:', 'Paiements Souples :') ?></strong> <?= t('MTN MoMo, Orange Money, or Cash on Delivery.', 'MTN MoMo, Orange Money ou Paiement à la livraison.') ?></span></li>
+          <li><span class="icon"><i data-lucide="check" class="icon-xs"></i></span> <span><strong><?= t('Single Unit Purchasing:', 'Achat à l\'Unité :') ?></strong> <?= t('Buy 1 or a few items for personal/household use.', 'Commandez 1 ou plusieurs articles pour votre foyer.') ?></span></li>
+          <li><span class="icon"><i data-lucide="check" class="icon-xs"></i></span> <span><strong><?= t('Fixed Transparent Retail Pricing:', 'Prix Fixes Transparents :') ?></strong> <?= t('Direct competitive rates in FCFA.', 'Tarifs compétitifs directs en FCFA.') ?></span></li>
+          <li><span class="icon"><i data-lucide="check" class="icon-xs"></i></span> <span><strong><?= t('Fast Local Courier Dispatch:', 'Livraison Express par Coursier :') ?></strong> <?= t('Douala & Yaoundé intra-city delivery within 24h.', 'Livraison locale à Douala et Yaoundé sous 24h.') ?></span></li>
+          <li><span class="icon"><i data-lucide="check" class="icon-xs"></i></span> <span><strong><?= t('Payment Flexibility:', 'Paiements Souples :') ?></strong> <?= t('MTN MoMo, Orange Money, or Cash on Delivery.', 'MTN MoMo, Orange Money ou Paiement à la livraison.') ?></span></li>
         </ul>
         <div style="background: rgba(2, 132, 199, 0.15); border: 1px solid rgba(2, 132, 199, 0.3); border-radius: 8px; padding: 10px; font-size: 0.8rem; color: #7dd3fc; text-align: center;">
           <?= t('Currently browsing with Retail individual pricing', 'Vous consultez actuellement les prix de détail individuels') ?>
         </div>
       <?php else: ?>
         <ul class="tab-features-list">
-          <li><span class="icon">✓</span> <span><strong><?= t('Quantity-Based Volume Discounts:', 'Remises Volume Dégressives :') ?></strong> <?= t('Save 15% to 28% off as order quantity increases.', 'Économisez 15% à 28% selon le volume commandé.') ?></span></li>
-          <li><span class="icon">✓</span> <span><strong><?= t('Minimum Order Quantities (MOQ):', 'Quantités Minimales (MOQ) :') ?></strong> <?= t('Optimized carton & pallet lot sizes for resellers.', 'Lots optimisés pour les revendeurs et entreprises.') ?></span></li>
-          <li><span class="icon">✓</span> <span><strong><?= t('Wholesale 50% Deposit Terms:', 'Acompte de 50% à la Commande :') ?></strong> <?= t('Pay 50% upfront via Mobile Money, balance on delivery inspection.', 'Réglez 50% par MoMo et le solde après vérification.') ?></span></li>
-          <li><span class="icon">✓</span> <span><strong><?= t('OHADA Business Invoicing:', 'Facturation Conforme OHADA :') ?></strong> <?= t('Downloadable proforma invoices for official accounting.', 'Factures proforma téléchargeables pour votre comptabilité.') ?></span></li>
+          <li><span class="icon"><i data-lucide="check" class="icon-xs"></i></span> <span><strong><?= t('Quantity-Based Volume Discounts:', 'Remises Volume Dégressives :') ?></strong> <?= t('Save 15% to 28% off as order quantity increases.', 'Économisez 15% à 28% selon le volume commandé.') ?></span></li>
+          <li><span class="icon"><i data-lucide="check" class="icon-xs"></i></span> <span><strong><?= t('Minimum Order Quantities (MOQ):', 'Quantités Minimales (MOQ) :') ?></strong> <?= t('Optimized carton & pallet lot sizes for resellers.', 'Lots optimisés pour les revendeurs et entreprises.') ?></span></li>
+          <li><span class="icon"><i data-lucide="check" class="icon-xs"></i></span> <span><strong><?= t('Wholesale 50% Deposit Terms:', 'Acompte de 50% à la Commande :') ?></strong> <?= t('Pay 50% upfront via Mobile Money, balance on delivery inspection.', 'Réglez 50% par MoMo et le solde après vérification.') ?></span></li>
+          <li><span class="icon"><i data-lucide="check" class="icon-xs"></i></span> <span><strong><?= t('OHADA Business Invoicing:', 'Facturation Conforme OHADA :') ?></strong> <?= t('Downloadable proforma invoices for official accounting.', 'Factures proforma téléchargeables pour votre comptabilité.') ?></span></li>
         </ul>
         <div style="background: rgba(4, 120, 87, 0.3); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 8px; padding: 10px; font-size: 0.8rem; color: #6ee7b7; text-align: center;">
           <?= t('✨ Wholesale B2B Volume Pricing Active! Bulk tiers unlocked.', '✨ Tarifs Grossistes Débloqués ! Prix dégressifs appliqués.') ?>
@@ -144,7 +144,7 @@ $categories = [
     <form method="GET" action="index.php#catalog" style="display: flex; gap: 8px;">
       <input type="text" name="q" value="<?= htmlspecialchars($query) ?>" placeholder="<?= t('Search products, cement, solar...', 'Rechercher ciment, solaire, pagne...') ?>" 
              style="padding: 10px 14px; border-radius: 20px; border: 1px solid #cbd5e1; font-size: 0.875rem; width: 260px;">
-      <button type="submit" class="btn-card-primary" style="padding: 10px 16px; border-radius: 20px;">🔍</button>
+      <button type="submit" class="btn-card-primary" style="padding: 10px 16px; border-radius: 20px;"><i data-lucide="search" class="icon-xs"></i></button>
     </form>
   </div>
 
@@ -177,9 +177,9 @@ $categories = [
             <img src="<?= htmlspecialchars($prod['image'] ?: 'assets/images/solar_lantern.jpg') ?>" alt="<?= htmlspecialchars($title) ?>">
             <div class="card-badge-top">
               <?php if ($prod['is_service']): ?>
-                <span class="tag-service">🛠️ <?= t('Service', 'Prestation') ?></span>
+                <span class="tag-service"><i data-lucide="wrench" class="icon-xs"></i> <?= t('Service', 'Prestation') ?></span>
               <?php elseif ($prod['is_bundle']): ?>
-                <span class="tag-bundle">⚡ <?= t('Bundle', 'Pack Clé en Main') ?></span>
+                <span class="tag-bundle"><i data-lucide="layers" class="icon-xs"></i> <?= t('Bundle', 'Pack Clé en Main') ?></span>
               <?php endif; ?>
             </div>
           </div>
@@ -229,7 +229,7 @@ $categories = [
               <?php if ($prod['is_service']): ?>
                 <button type="button" class="btn-card-primary" 
                         onclick="openServiceModal(<?= $prod['id'] ?>, '<?= htmlspecialchars(addslashes($title)) ?>')">
-                  📅 <?= t('Book Service', 'Réserver Date') ?>
+                  <i data-lucide="calendar" class="icon-xs"></i> <?= t('Book Service', 'Réserver Date') ?>
                 </button>
               <?php else: ?>
                 <button type="button" class="btn-card-primary" 
@@ -243,7 +243,7 @@ $categories = [
                           is_service: 0,
                           is_bundle: <?= $prod['is_bundle'] ?>
                         }, <?= $is_ws ? $prod['moq'] : 1 ?>)">
-                  🛒 <?= t('Add to Cart', 'Ajouter au Panier') ?>
+                  <i data-lucide="shopping-cart" class="icon-xs"></i> <?= t('Add to Cart', 'Ajouter au Panier') ?>
                 </button>
               <?php endif; ?>
 
@@ -265,25 +265,25 @@ $categories = [
   <div style="max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
     
     <div>
-      <div style="font-size: 2rem; margin-bottom: 8px;">🛡️</div>
+      <div style="margin-bottom: 8px; color: #10b981;"><i data-lucide="shield-check" class="icon-xl"></i></div>
       <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 6px;"><?= t('Direct Owner Guarantee', 'Garantie Directe Propriétaire') ?></h4>
       <p style="font-size: 0.85rem; color: #94a3b8;"><?= t('No third-party sellers or unverified dropshippers. The platform owner directly manages inventory, testing, and delivery.', 'Aucun vendeur tiers non vérifié. Le propriétaire contrôle directement la conformité et l\'expédition.') ?></p>
     </div>
 
     <div>
-      <div style="font-size: 2rem; margin-bottom: 8px;">📱</div>
+      <div style="margin-bottom: 8px; color: #10b981;"><i data-lucide="smartphone" class="icon-xl"></i></div>
       <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 6px;"><?= t('Official Mobile Money Rails', 'Paiements MoMo & Orange') ?></h4>
       <p style="font-size: 0.85rem; color: #94a3b8;"><?= t('Instant push authorization via MTN MoMo (*126#) and Orange Money (#150#) with realistic USSD verification.', 'Règlement simplifié par MTN MoMo et Orange Money avec reçu numérique immédiat.') ?></p>
     </div>
 
     <div>
-      <div style="font-size: 2rem; margin-bottom: 8px;">🚚</div>
+      <div style="margin-bottom: 8px; color: #10b981;"><i data-lucide="truck" class="icon-xl"></i></div>
       <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 6px;"><?= t('Cameroon Logistics Coverage', 'Logistique Interurbaine') ?></h4>
       <p style="font-size: 0.85rem; color: #94a3b8;"><?= t('Douala & Yaoundé 24h courier dispatch. Reliable freight shipments to Bafoussam, Bamenda, Buea, Limbe, and nationwide.', 'Expéditions locales et agences partenaires vers toutes les régions du Cameroun.') ?></p>
     </div>
 
     <div>
-      <div style="font-size: 2rem; margin-bottom: 8px;">📄</div>
+      <div style="margin-bottom: 8px; color: #10b981;"><i data-lucide="file-text" class="icon-xl"></i></div>
       <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 6px;"><?= t('Proforma Invoicing for B2B', 'Facturation Entreprises') ?></h4>
       <p style="font-size: 0.85rem; color: #94a3b8;"><?= t('Formal business invoices generated for wholesale orders with deposit tracking and tax compliance.', 'Factures proforma en bonne et due forme avec mention de l\'acompte et du solde.') ?></p>
     </div>
@@ -294,9 +294,9 @@ $categories = [
 <!-- Service Booking Modal -->
 <div class="cart-drawer-overlay" id="serviceModalOverlay" onclick="if(event.target === this) closeServiceModal()">
   <div style="background: #fff; width: 480px; max-width: 95vw; border-radius: 16px; padding: 28px; margin: auto; position: relative;">
-    <button type="button" style="position: absolute; top: 16px; right: 16px; font-size: 1.25rem;" onclick="closeServiceModal()">✕</button>
+    <button type="button" style="position: absolute; top: 16px; right: 16px;" onclick="closeServiceModal()"><i data-lucide="x"></i></button>
     
-    <h3 style="font-size: 1.35rem; margin-bottom: 6px;">📅 <?= t('Book On-Site Technical Service', 'Réserver une Prestation Technique') ?></h3>
+    <h3 style="font-size: 1.35rem; margin-bottom: 6px;"><i data-lucide="calendar" class="icon-sm"></i> <?= t('Book On-Site Technical Service', 'Réserver une Prestation Technique') ?></h3>
     <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 20px;" id="modalServiceTitle">Service Booking</p>
 
     <form id="serviceBookingForm" onsubmit="handleServiceBooking(event)">
@@ -332,7 +332,7 @@ $categories = [
       </div>
 
       <button type="submit" class="btn-card-primary" style="width: 100%; padding: 12px; font-size: 1rem;">
-        ✓ <?= t('Confirm Technical Appointment', 'Confirmer le Rendez-vous') ?>
+        <i data-lucide="check" class="icon-sm"></i> <?= t('Confirm Technical Appointment', 'Confirmer le Rendez-vous') ?>
       </button>
     </form>
   </div>

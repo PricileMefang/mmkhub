@@ -7,7 +7,7 @@ $lang = get_lang();
 <div style="max-width: 1100px; margin: 40px auto; padding: 0 20px;">
   
   <div style="margin-bottom: 28px;">
-    <h1 style="font-size: 2.2rem; margin-bottom: 6px;">🔒 <?= t('Cameroon Secure Checkout', 'Caisse Sécurisée Cameroun') ?></h1>
+    <h1 style="font-size: 2.2rem; margin-bottom: 6px;"><i data-lucide="lock" class="icon-sm"></i> <?= t('Cameroon Secure Checkout', 'Caisse Sécurisée Cameroun') ?></h1>
     <p style="color: #64748b;">
       <?= $is_ws 
         ? t('Wholesale B2B Order: 50% upfront deposit via Mobile Money, balance settled on delivery inspection.', 'Commande Grossiste B2B : Acompte de 50% par Mobile Money, solde à la livraison.') 
@@ -24,7 +24,7 @@ $lang = get_lang();
         <!-- Contact & Delivery Address -->
         <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 24px; margin-bottom: 24px;">
           <h3 style="font-size: 1.2rem; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;">
-            <span>📍</span> <span><?= t('1. Delivery Address & Contact', '1. Adresse de Livraison & Contact') ?></span>
+            <i data-lucide="map-pin" class="icon-sm"></i> <span><?= t('1. Delivery Address & Contact', '1. Adresse de Livraison & Contact') ?></span>
           </h3>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
@@ -65,7 +65,7 @@ $lang = get_lang();
         <!-- Payment Method Selection -->
         <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 24px;">
           <h3 style="font-size: 1.2rem; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;">
-            <span>💳</span> <span><?= t('2. Payment Method (Cameroon Rails)', '2. Moyen de Règlement') ?></span>
+            <i data-lucide="credit-card" class="icon-sm"></i> <span><?= t('2. Payment Method (Cameroon Rails)', '2. Moyen de Règlement') ?></span>
           </h3>
 
           <div style="display: flex; flex-direction: column; gap: 12px;">
@@ -140,7 +140,7 @@ $lang = get_lang();
         <?php if ($is_ws): ?>
           <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 14px; margin-bottom: 20px;">
             <div style="font-weight: 700; color: #065f46; margin-bottom: 4px; font-size: 0.9rem;">
-              🏢 <?= t('Wholesale Payment Breakdown:', 'Détail Règlement Grossiste :') ?>
+              <i data-lucide="building-2" class="icon-xs"></i> <?= t('Wholesale Payment Breakdown:', 'Détail Règlement Grossiste :') ?>
             </div>
             <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
               <span><?= t('50% Upfront Deposit (Now):', 'Acompte 50% (À payer maintenant) :') ?></span>
